@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masilla para estuco | Masillas Colombia — Ficha técnica</title>
+<meta name="description" content="Ficha técnica y de seguridad de la Masilla de Masillas Colombia. Propiedades, modo de aplicación, rendimiento y pedidos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1E2226;
+    --ink-soft:#4B5157;
+    --paper:#EDEEEA;
+    --card:#F8F8F5;
+    --card-line:#DAD9D2;
+    --concrete:#8E8C82;
+    --brick:#BE5B2E;
+    --brick-dark:#9C4620;
+    --navy:#22394C;
+    --navy-deep:#182A38;
+    --amber:#D79A3D;
+    --max:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.12;
+    margin:0 0 .5em;
+    color:var(--ink);
+  }
+  p{margin:0 0 1em; max-width:62ch;}
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 20px;}
+  .section{padding:64px 0;}
+  .section + .section{border-top:1px solid var(--card-line);}
+  .eyebrow{
+    font-size:.8rem;
+    color:var(--brick);
+    font-weight:600;
+    margin:0 0 10px;
+  }
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:var(--navy-deep);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 20px; max-width:var(--max); margin:0 auto; gap:16px;
+  }
+  .brand{display:flex; align-items:center; gap:10px; min-width:0;}
+  .brand img{height:44px; width:auto;}
+  nav.links{display:none; gap:22px;}
+  nav.links a{
+    color:#CBD3D9; text-decoration:none; font-size:.92rem; font-weight:500;
+  }
+  nav.links a:hover{color:#fff;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--brick); color:#fff; text-decoration:none;
+    padding:11px 18px; border-radius:7px; font-weight:600; font-size:.92rem;
+    border:none; cursor:pointer; white-space:nowrap;
+    transition:background .15s ease;
+  }
+  .btn:hover{background:var(--brick-dark);}
+  .btn-ghost{
+    background:transparent; color:#F4F3EF; border:1px solid rgba(255,255,255,.35);
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.08);}
+  @media(min-width:820px){ nav.links{display:flex;} }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative; color:#fff; overflow:hidden;
+    background:var(--navy-deep);
+  }
+  .hero-bg{
+    position:absolute; inset:0; z-index:0;
+  }
+  .hero-bg img{
+    width:100%; height:100%; object-fit:cover; opacity:.34;
+  }
+  .hero-bg::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(24,42,56,.55) 0%, rgba(24,42,56,.92) 100%);
+  }
+  .hero-inner{
+    position:relative; z-index:1; padding:76px 20px 88px; max-width:var(--max);
+    margin:0 auto;
+  }
+  .hero-split{
+    display:grid; grid-template-columns:1fr; gap:32px; align-items:center;
+  }
+  .hero-logo{
+    order:-1; display:flex; justify-content:center;
+  }
+  .hero-logo img{width:150px; height:auto; opacity:.95;}
+  @media(min-width:820px){
+    .hero-split{
+      grid-template-columns:1fr 1px 1fr; gap:0; align-items:center;
+    }
+    .hero-split .hero-text{padding-right:48px;}
+    .hero-logo{
+      order:0; padding-left:48px; justify-content:flex-start;
+    }
+    .hero-logo img{width:260px;}
+    .hero-divider{
+      width:1px; height:180px; background:rgba(255,255,255,.22);
+    }
+  }
+  .hero h1{
+    color:#fff; font-size:clamp(2rem, 5vw, 3.1rem); max-width:16ch;
+    margin-bottom:.35em;
+  }
+  .hero p.lead{
+    color:#DCE3E8; font-size:1.08rem; max-width:48ch; margin-bottom:1.6em;
+  }
+  .hero .cta-row{display:flex; flex-wrap:wrap; gap:12px;}
+  .hero .tags{
+    display:flex; flex-wrap:wrap; gap:10px; margin-top:34px;
+  }
+  .tag{
+    border:1px solid rgba(255,255,255,.28); color:#DCE3E8;
+    font-size:.8rem; padding:6px 12px; border-radius:100px;
+  }
+
+  /* ---------- quick spec strip ---------- */
+  .specstrip{background:var(--card); border-bottom:1px solid var(--card-line);}
+  .spec-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:0;
+    max-width:var(--max); margin:0 auto;
+  }
+  .spec-item{
+    padding:22px 20px; border-right:1px solid var(--card-line);
+    border-bottom:1px solid var(--card-line);
+  }
+  .spec-item:nth-child(2n){border-right:none;}
+  .spec-item .val{
+    font-family:'Fraunces',serif; font-size:1.5rem; font-weight:600;
+    color:var(--navy);
+  }
+  .spec-item .lbl{font-size:.82rem; color:var(--ink-soft);}
+  @media(min-width:720px){
+    .spec-grid{grid-template-columns:repeat(5,1fr);}
+    .spec-item:nth-child(2n){border-right:1px solid var(--card-line);}
+    .spec-item:nth-child(5n){border-right:none;}
+    .spec-item{border-bottom:none;}
+  }
+
+  /* ---------- two col ---------- */
+  .two-col{
+    display:grid; grid-template-columns:1fr; gap:36px; align-items:center;
+  }
+  @media(min-width:860px){ .two-col{grid-template-columns:1.05fr .95fr;} }
+  .two-col.reverse .media{order:-1;}
+  @media(min-width:860px){ .two-col.reverse .media{order:1;} }
+  .media img{
+    border-radius:10px; border:1px solid var(--card-line);
+  }
+  .media figcaption{
+    font-size:.8rem; color:var(--ink-soft); margin-top:8px;
+  }
+
+  ul.check{list-style:none; margin:0 0 1.2em; padding:0;}
+  ul.check li{
+    position:relative; padding-left:28px; margin-bottom:12px; max-width:52ch;
+  }
+  ul.check li::before{
+    content:""; position:absolute; left:0; top:.35em; width:14px; height:14px;
+    border:2px solid var(--brick); border-radius:3px; transform:rotate(-6deg);
+  }
+
+  /* ---------- steps ---------- */
+  .steps{
+    display:grid; grid-template-columns:1fr; gap:0; counter-reset:step;
+    border:1px solid var(--card-line); border-radius:10px; overflow:hidden;
+    background:var(--card);
+  }
+  .step{
+    display:grid; grid-template-columns:56px 1fr; gap:16px;
+    padding:20px 22px; border-bottom:1px solid var(--card-line);
+  }
+  .step:last-child{border-bottom:none;}
+  .step .num{
+    counter-increment:step; font-family:'Fraunces',serif; font-weight:600;
+    font-size:1.3rem; color:var(--brick);
+  }
+  .step .num::before{content: counter(step, decimal-leading-zero);}
+  .step h3{font-size:1.02rem; margin-bottom:.25em;}
+  .step p{margin:0; font-size:.94rem; color:var(--ink-soft);}
+
+  /* ---------- calculator ---------- */
+  .calc{
+    background:var(--navy); color:#fff; border-radius:12px;
+    padding:32px; display:grid; gap:22px;
+  }
+  @media(min-width:760px){ .calc{grid-template-columns:1fr 1fr; align-items:center;} }
+  .calc h3{color:#fff; font-size:1.25rem;}
+  .calc p{color:#C9D2D8; font-size:.92rem;}
+  .calc-box{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.16);
+    border-radius:10px; padding:22px;}
+  .calc-box label{display:block; font-size:.85rem; color:#C9D2D8; margin-bottom:8px;}
+  .calc-row{display:flex; gap:10px;}
+  .calc-row input{
+    flex:1; padding:12px 14px; border-radius:7px; border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.95); font-size:1rem; font-family:'Work Sans',sans-serif;
+  }
+  .calc-result{
+    margin-top:16px; font-size:1.02rem; min-height:1.6em;
+  }
+  .calc-result strong{color:var(--amber);}
+  .calc-note{font-size:.78rem; color:#9FADB6; margin-top:10px;}
+
+  /* ---------- hazard ---------- */
+  .hazard-top{
+    display:flex; flex-wrap:wrap; gap:22px; align-items:flex-start; margin-bottom:26px;
+  }
+  .pictos{display:flex; gap:16px;}
+  .picto{
+    width:78px; height:78px; background:#fff; border:3px solid #D0292A;
+    transform:rotate(45deg); border-radius:8px; position:relative;
+    flex-shrink:0;
+  }
+  .picto .icon-inner{
+    transform:rotate(-45deg); width:100%; height:100%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.6rem;
+  }
+  .warn-word{
+    background:var(--brick); color:#fff; font-weight:700; font-size:.85rem;
+    padding:6px 14px; border-radius:5px; display:inline-block;
+  }
+  .h-codes{
+    display:grid; gap:10px; margin-top:6px;
+  }
+  .h-code{
+    display:flex; gap:12px; background:var(--card); border:1px solid var(--card-line);
+    border-radius:8px; padding:14px 16px;
+  }
+  .h-code .code{
+    font-family:'Fraunces',serif; font-weight:700; color:var(--brick); flex-shrink:0;
+    min-width:52px;
+  }
+  details.acc{
+    border:1px solid var(--card-line); border-radius:8px; margin-bottom:10px;
+    background:var(--card); overflow:hidden;
+  }
+  details.acc summary{
+    cursor:pointer; padding:15px 18px; font-weight:600; list-style:none;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:.98rem;
+  }
+  details.acc summary::-webkit-details-marker{display:none;}
+  details.acc summary::after{
+    content:"+"; font-size:1.3rem; color:var(--brick); font-weight:400;
+    transform:translateY(-2px);
+  }
+  details.acc[open] summary::after{content:"–";}
+  details.acc .acc-body{padding:0 18px 18px; color:var(--ink-soft); font-size:.94rem;}
+  details.acc .acc-body p{max-width:58ch;}
+
+  .ppe-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:20px;
+  }
+  @media(min-width:700px){ .ppe-grid{grid-template-columns:repeat(4,1fr);} }
+  .ppe{
+    background:var(--card); border:1px solid var(--card-line); border-radius:8px;
+    padding:18px 14px; text-align:center;
+  }
+  .ppe .glyph{font-size:1.8rem; margin-bottom:8px;}
+  .ppe .name{font-weight:600; font-size:.86rem;}
+
+  /* storage/regulatory */
+  .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;}
+  .badge{
+    font-size:.78rem; border:1px solid var(--card-line); border-radius:100px;
+    padding:6px 14px; color:var(--ink-soft); background:var(--card);
+  }
+
+  /* ---------- contact ---------- */
+  .contact{
+    background:var(--navy-deep); color:#fff;
+  }
+  .contact h2{color:#fff;}
+  .contact p{color:#CBD3D9;}
+  .contact-grid{
+    display:grid; grid-template-columns:1fr; gap:18px; margin-top:26px;
+  }
+  @media(min-width:760px){ .contact-grid{grid-template-columns:1fr 1fr;} }
+  .contact-card{
+    background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
+    border-radius:10px; padding:24px;
+  }
+  .contact-card .k{font-size:.8rem; color:#9FADB6; margin-bottom:6px;}
+  .contact-card .v{font-size:1.05rem; font-weight:600;}
+  .contact-card a.v{text-decoration:none;}
+  .whatsapp-cta{
+    display:flex; align-items:center; gap:14px; background:var(--brick);
+    border-radius:10px; padding:22px 24px; margin-top:22px; text-decoration:none;
+    color:#fff;
+  }
+  .whatsapp-cta:hover{background:var(--brick-dark);}
+  .whatsapp-cta .glyph{font-size:1.8rem;}
+  .whatsapp-cta .txt strong{display:block; font-size:1.08rem;}
+  .whatsapp-cta .txt span{font-size:.85rem; color:#FBE3D6;}
+
+  /* floating whatsapp */
+  .floaty{
+    position:fixed; right:18px; bottom:18px; z-index:50;
+    background:var(--brick); color:#fff; text-decoration:none;
+    width:56px; height:56px; border-radius:50%; display:flex;
+    align-items:center; justify-content:center; font-size:1.5rem;
+    box-shadow:0 6px 18px rgba(0,0,0,.28);
+  }
+  .floaty:hover{background:var(--brick-dark);}
+
+  /* footer */
+  footer{background:var(--navy-deep); border-top:1px solid rgba(255,255,255,.1);
+    padding:34px 0 90px; color:#9FADB6; font-size:.85rem;}
+  .foot-row{display:flex; flex-wrap:wrap; gap:22px; justify-content:space-between; align-items:flex-start;}
+  .foot-brand{display:flex; align-items:center; gap:10px;}
+  .foot-brand img{height:30px; border-radius:5px;}
+  .foot-note{max-width:60ch; margin-top:18px; color:#7C8A92; font-size:.78rem;}
+
+  /* ---------- brand band (logo negro, fondo claro) ---------- */
+  .brand-band{background:var(--card);}
+  .brand-band .split{
+    display:grid; grid-template-columns:1fr; gap:28px; align-items:center;
+    text-align:center;
+  }
+  .brand-band .blogo{display:flex; justify-content:center;}
+  .brand-band .blogo img{width:150px; height:auto;}
+  .brand-band .btxt h2{margin-bottom:.3em;}
+  .brand-band .btxt p{margin:0 auto; max-width:44ch;}
+  @media(min-width:820px){
+    .brand-band .split{
+      grid-template-columns:auto 1px 1fr; gap:44px; text-align:left;
+    }
+    .brand-band .blogo img{width:190px;}
+    .brand-band .bdivider{width:1px; height:120px; background:var(--card-line);}
+    .brand-band .btxt p{margin:0;}
+  }
+
+  /* calc order button */
+  .calc-order{
+    display:none; margin-top:14px;
+  }
+  .calc-order.show{display:inline-flex;}
+
+  /* stroke divider (trowel motif) */
+  .stroke-divider{height:26px; overflow:hidden; background:var(--paper);}
+  .stroke-divider svg{width:100%; height:100%; display:block;}
+
+  @media(min-width:860px){ footer{padding-bottom:34px;} .floaty{display:none;} }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-row">
+    <div class="brand">
+      <img src="https://cvdc.com.co/wp-content/uploads/2026/09/Recurso-3-scaled.png" alt="Masillas Colombia">
+    </div>
+    <nav class="links">
+      <a href="#producto">Producto</a>
+      <a href="#aplicacion">Aplicación</a>
+      <a href="#rendimiento">Rendimiento</a>
+      <a href="#seguridad">Seguridad</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn" href="https://wa.me/573002473804?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20Masilla" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://cvdc.com.co/wp-content/uploads/2026/09/istockphoto-488804807-612x612-1.jpg" alt="Obra en construcción">
+  </div>
+  <div class="hero-inner">
+    <div class="hero-split">
+      <div class="hero-text">
+        <h1>Masilla lista para estucar, sin rodeos</h1>
+        <p class="lead">Pasta de alta pureza a base de cal, lista para aplicar sobre mortero, concreto o reboque de cemento. Buen acabado, buen rendimiento y sin necesidad de mezclas complicadas.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://wa.me/573002473804?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20Masilla" target="_blank" rel="noopener">Hacer un pedido</a>
+          <a class="btn btn-ghost" href="#producto">Ver ficha técnica</a>
+        </div>
+        <div class="tags">
+          <span class="tag">Bolsa de 10 kg</span>
+          <span class="tag">Rendimiento 5 m² por bolsa</span>
+          <span class="tag">Lista para aplicar</span>
+        </div>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-logo">
+        <img src="https://cvdc.com.co/wp-content/uploads/2026/09/Recurso-3-scaled.png" alt="Masillas Colombia">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="specstrip">
+  <div class="spec-grid">
+    <div class="spec-item"><div class="val">Ca(OH)₂</div><div class="lbl">Fórmula química</div></div>
+    <div class="spec-item"><div class="val">1,20–1,30</div><div class="lbl">Densidad (g/cm³)</div></div>
+    <div class="spec-item"><div class="val">10 – 12</div><div class="lbl">pH</div></div>
+    <div class="spec-item"><div class="val">10 kg</div><div class="lbl">Presentación</div></div>
+    <div class="spec-item"><div class="val">2–3 h</div><div class="lbl">Secado al tacto</div></div>
+  </div>
+</div>
+
+<section class="section" id="producto">
+  <div class="wrap">
+    <p class="eyebrow">El producto</p>
+    <div class="two-col">
+      <div>
+        <h2>Cal para estucar, en pasta suave y blanca</h2>
+        <p>La Masilla de Masillas Colombia es una mezcla a base de cal (hidróxido de calcio, Ca(OH)₂ — 74 g/mol) presentada como pasta lista para usar. Se conoce también como cal para estucar o masilla blanca, y su uso principal es el estuco y la preparación de superficies antes de pintar.</p>
+        <ul class="check">
+          <li>Alta pureza y calidad garantizada bolsa a bolsa.</li>
+          <li>Lista para aplicar, sin preparaciones previas.</li>
+          <li>Excelente acabado sobre mortero, concreto y reboque de cemento.</li>
+          <li>Absorbe CO₂ durante el curado y se endurece con el tiempo: mientras más vieja, mejor trabaja.</li>
+        </ul>
+      </div>
+      <figure class="media">
+        <img src="https://cvdc.com.co/wp-content/uploads/2026/09/White_cement_putty.webp" alt="Masilla blanca en pasta">
+        <figcaption>Aspecto: pasta suave, color blanco, olor característico.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="stroke-divider">
+  <svg viewBox="0 0 400 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-10 20 L60 6 L130 20 L200 6 L270 20 L340 6 L410 20" stroke="#BE5B2E" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+</div>
+
+<section class="section" id="aplicacion">
+  <div class="wrap">
+    <p class="eyebrow">Modo de uso</p>
+    <div class="two-col reverse">
+      <div class="media">
+        <img src="https://cvdc.com.co/wp-content/uploads/2026/09/como-masillar-una-pared-1100x733-1.jpg" alt="Aplicación de masilla en pared con espátula">
+        <figcaption>Se aplica con llana o espátula, en capas delgadas.</figcaption>
+      </div>
+      <div>
+        <h2>Cómo se aplica</h2>
+        <p>La superficie debe estar seca y libre de grasas. El producto viene listo para usar: solo hay que mezclar el contenido de la bolsa para homogenizarlo antes de aplicar.</p>
+        <div class="steps">
+          <div class="step"><div class="num"></div><div><h3>Prepara la superficie</h3><p>Aplícala sobre mortero, concreto o reboque de cemento, siempre seco y sin grasa.</p></div></div>
+          <div class="step"><div class="num"></div><div><h3>Homogeniza el producto</h3><p>Mezcla el contenido de la bolsa. Si la combinas con talco o cemento, puede necesitar un poco de agua adicional.</p></div></div>
+          <div class="step"><div class="num"></div><div><h3>Aplica con llana o espátula</h3><p>En capas de 1 a 2 mm por mano, según el acabado que busques.</p></div></div>
+          <div class="step"><div class="num"></div><div><h3>Deja secar</h3><p>De 2 a 3 horas al tacto, según la temperatura ambiente del lugar de aplicación.</p></div></div>
+          <div class="step"><div class="num"></div><div><h3>Protégela de la lluvia</h3><p>Cubre la superficie recién aplicada hasta que haya curado.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="rendimiento">
+  <div class="wrap">
+    <p class="eyebrow">Rinde lo que necesitas</p>
+    <h2>Calcula cuántas bolsas necesitas</h2>
+    <p>El rendimiento medio es de 5 m² por bolsa de 10 kg, aplicando entre 1 y 2 mm por mano. Puede variar según el acabado de la superficie donde vayas a trabajar.</p>
+    <div class="calc">
+      <div>
+        <h3>Calculadora de bolsas</h3>
+        <p>Ingresa el área que vas a estucar y te decimos cuántas bolsas de 10 kg debes pedir.</p>
+      </div>
+      <div class="calc-box">
+        <label for="area">Área a estucar (m²)</label>
+        <div class="calc-row">
+          <input type="number" id="area" min="0" step="0.5" placeholder="Ej: 42" inputmode="decimal">
+          <button class="btn" onclick="calcularBolsas()">Calcular</button>
+        </div>
+        <div class="calc-result" id="resultado"></div>
+        <a class="btn calc-order" id="btnPedirCalculo" href="#" target="_blank" rel="noopener">Pedir esta cantidad por WhatsApp</a>
+        <div class="calc-note">Estimado de referencia. El acabado y la absorción de la superficie pueden variar el rendimiento real.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="seguridad">
+  <div class="wrap">
+    <p class="eyebrow">Seguridad y salud</p>
+    <h2>Manéjala con los cuidados de cualquier material a base de cal</h2>
+    <p>Clasificada según el Sistema Globalmente Armonizado (SGA) como irritante para la piel y los ojos. Nada fuera de lo común para un producto de estuco, pero vale la pena tomar precauciones.</p>
+
+    <div class="hazard-top">
+      <div class="pictos">
+        <div class="picto"><div class="icon-inner">⚠️</div></div>
+        <div class="picto"><div class="icon-inner">💧</div></div>
+      </div>
+      <div>
+        <span class="warn-word">Palabra de advertencia: Peligro</span>
+        <div class="h-codes">
+          <div class="h-code"><span class="code">H317</span><span>Puede provocar una reacción alérgica en la piel.</span></div>
+          <div class="h-code"><span class="code">H318</span><span>Provoca lesiones oculares graves.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <details class="acc" open>
+      <summary>Consejos de prudencia</summary>
+      <div class="acc-body">
+        <p>Lee la etiqueta antes de usar el producto. Evita respirar el polvo o los vapores, y evita el contacto con los ojos, la piel y la ropa. Usa guantes y protección para los ojos y la cara. Mantén el producto fuera del alcance de los niños y lávate bien las manos después de manipularlo.</p>
+        <p>En caso de contacto con la piel, lava con abundante agua. Si necesitas consultar a un médico, ten a mano el envase o la etiqueta del producto.</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Primeros auxilios</summary>
+      <div class="acc-body">
+        <p><strong>Piel:</strong> retira la ropa y el calzado contaminados. Lava la piel con abundante agua fría y jabón neutro. Si la afección persiste, acude al médico.</p>
+        <p><strong>Ojos:</strong> enjuaga con abundante agua a temperatura ambiente durante al menos 15 minutos, sin frotar. Retira los lentes de contacto si no están adheridos al ojo. Acude al médico después del lavado.</p>
+        <p><strong>Inhalación:</strong> lleva a la persona afectada a un lugar con aire limpio y mantenla en reposo. Busca atención médica si hay molestias persistentes.</p>
+        <p><strong>Ingestión:</strong> no induzcas el vómito sin supervisión médica. Enjuaga la boca y da a beber máximo dos vasos de agua. Mantén a la persona en reposo y busca asistencia médica.</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Almacenamiento y manejo</summary>
+      <div class="acc-body">
+        <p>Guarda el producto en su empaque original, bien cerrado, entre 15 °C y 25 °C, protegido de la lluvia y del sol directo. No tiene un tiempo límite de almacenamiento: con el paso del tiempo mejora sus características.</p>
+        <p>Evita el contacto con materiales oxidantes o ácidos fuertes. Si encuentras el material seco, basta con añadir un poco de agua y mezclar para volver a dejarlo en condiciones de aplicación.</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Gestión de residuos</summary>
+      <div class="acc-body">
+        <p>El material ya seco y curado se convierte en carbonato de calcio, una sustancia no peligrosa que puede disponerse con los demás residuos de escombro de la obra.</p>
+        <p>El empaque que estuvo en contacto directo con el producto debe gestionarse como residuo peligroso, siguiendo la normativa vigente de tu municipio.</p>
+      </div>
+    </details>
+
+    <div class="ppe-grid">
+      <div class="ppe"><div class="glyph">🥽</div><div class="name">Monogafas</div></div>
+      <div class="ppe"><div class="glyph">🧤</div><div class="name">Guantes de PVC o nitrilo</div></div>
+      <div class="ppe"><div class="glyph">👕</div><div class="name">Manga larga y pantalón de drill</div></div>
+      <div class="ppe"><div class="glyph">😷</div><div class="name">Mascarilla al lijar</div></div>
+    </div>
+
+    <div class="badges">
+      <span class="badge">Clasificado bajo el Decreto 1496 de 2018</span>
+      <span class="badge">Resolución 773 de 2021</span>
+      <span class="badge">Composición: óxido de calcio (CAS 1305-78-8), 35–45%</span>
+    </div>
+    <p style="margin-top:18px; font-size:.85rem; color:var(--ink-soft);">Esta página resume la información de seguridad para uso general. Si necesitas la Ficha de Datos de Seguridad completa para tu área de SST, escríbenos y te la enviamos.</p>
+  </div>
+</section>
+
+<div class="stroke-divider">
+  <svg viewBox="0 0 400 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-10 20 L60 6 L130 20 L200 6 L270 20 L340 6 L410 20" stroke="#22394C" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.35"/>
+  </svg>
+</div>
+
+<section class="section" id="beneficios">
+  <div class="wrap">
+    <p class="eyebrow">Por qué usarla</p>
+    <div class="two-col">
+      <div>
+        <h2>Menos pasos, mejor acabado</h2>
+        <p>Pensada para maestros de obra y estucadores que no quieren perder tiempo preparando mezclas. Se aplica directo de la bolsa y da un acabado parejo, listo para pintar.</p>
+        <ul class="check">
+          <li>Rendimiento constante: 5 m² por bolsa en condiciones normales.</li>
+          <li>Buen agarre sobre mortero, concreto y reboque de cemento.</li>
+          <li>No se echa a perder guardada: mejora con el tiempo.</li>
+        </ul>
+      </div>
+      <figure class="media">
+        <img src="https://cvdc.com.co/wp-content/uploads/2026/09/ventajas-masilla-cemix.jpg" alt="Ventajas de la masilla en obra">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section brand-band">
+  <div class="wrap">
+    <div class="split">
+      <div class="blogo">
+        <img src="https://cvdc.com.co/wp-content/uploads/2026/09/Recurso-2-scaled.png" alt="Masillas Colombia">
+      </div>
+      <div class="bdivider"></div>
+      <div class="btxt">
+        <h2>Masillas Colombia</h2>
+        <p>Fabricada en Villamaría, Caldas. Una sola referencia, bien hecha: la cal para estucar que los maestros de obra piden por su nombre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contacto">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--amber);">Contacto</p>
+    <h2>Haz tu pedido</h2>
+    <p>Escríbenos por WhatsApp para cotizar tu pedido o resolver dudas técnicas sobre el producto.</p>
+
+    <a class="whatsapp-cta" href="https://wa.me/573002473804?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20Masilla" target="_blank" rel="noopener">
+      <span class="glyph">💬</span>
+      <span class="txt">
+        <strong>Pedir por WhatsApp</strong>
+        <span>+57 300 247 3804 · respuesta directa</span>
+      </span>
+    </a>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="k">Correo</div>
+        <a class="v" href="mailto:masillascolombiasas@gmail.com">masillascolombiasas@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="k">Dirección</div>
+        <div class="v">Cl 21B # 6A-45, P1, Barrio Turín, Villamaría, Caldas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a class="floaty" href="https://wa.me/573002473804?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20Masilla" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">💬</a>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-brand">
+        <img src="https://cvdc.com.co/wp-content/uploads/2026/09/Recurso-3-scaled.png" alt="Masillas Colombia">
+      </div>
+      <div>Línea de emergencias con sustancias químicas — Cisproquim: 018000-916012 · Línea 123 en Manizales</div>
+    </div>
+    <p class="foot-note">Información técnica de referencia elaborada a partir de la ficha de datos de seguridad del producto. Las condiciones reales de manejo pueden variar; ante cualquier duda, consulta la ficha completa o escríbenos.</p>
+  </div>
+</footer>
+
+<script>
+function calcularBolsas(){
+  var input = document.getElementById('area');
+  var out = document.getElementById('resultado');
+  var boton = document.getElementById('btnPedirCalculo');
+  var area = parseFloat(input.value);
+  if(!area || area <= 0){
+    out.innerHTML = 'Ingresa un área válida en metros cuadrados.';
+    boton.classList.remove('show');
+    return;
+  }
+  var bolsas = Math.ceil(area/5);
+  var kg = bolsas*10;
+  out.innerHTML = 'Necesitas aproximadamente <strong>' + bolsas + (bolsas===1?' bolsa':' bolsas') + '</strong> de 10 kg — unos ' + kg + ' kg en total.';
+
+  var mensaje = 'Hola, quiero hacer un pedido de Masilla. Necesito aproximadamente '
+    + bolsas + (bolsas===1?' bolsa':' bolsas') + ' de 10 kg (para unos ' + area + ' m2).';
+  boton.href = 'https://wa.me/573002473804?text=' + encodeURIComponent(mensaje);
+  boton.classList.add('show');
+}
+document.getElementById('area').addEventListener('keydown', function(e){
+  if(e.key === 'Enter'){ calcularBolsas(); }
+});
+</script>
+
+</body>
+</html>
