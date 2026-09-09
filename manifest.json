@@ -1,0 +1,26 @@
+{
+  "name": "Masillas Colombia",
+  "short_name": "Masillas CO",
+  "description": "Masilla para estuco, lista para aplicar. Ficha técnica y pedidos.",
+  "start_url": "https://masillascolombiasas.github.io/",
+  "scope": "https://masillascolombiasas.github.io/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EDEEEA",
+  "theme_color": "#22394C",
+  "lang": "es-CO",
+  "icons": [
+    {
+      "src": "https://cvdc.com.co/wp-content/uploads/2026/09/Recurso-2-scaled.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://cvdc.com.co/wp-content/uploads/2026/09/Recurso-2-scaled.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

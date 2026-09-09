@@ -5,6 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Masilla para estuco | Masillas Colombia — Ficha técnica</title>
 <meta name="description" content="Ficha técnica y de seguridad de la Masilla de Masillas Colombia. Propiedades, modo de aplicación, rendimiento y pedidos.">
+
+<!-- Vista previa al compartir (WhatsApp, redes, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://masillascolombiasas.github.io/">
+<meta property="og:site_name" content="Masillas Colombia">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="Masillas Colombia — Masilla lista para estucar">
+<meta property="og:description" content="Pasta de alta pureza a base de cal, lista para aplicar. Ficha técnica, rendimiento y pedidos por WhatsApp.">
+<meta property="og:image" content="https://cvdc.com.co/wp-content/uploads/2026/09/ventajas-masilla-cemix.jpg">
+<meta property="og:image:width" content="1100">
+<meta property="og:image:height" content="733">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Masillas Colombia — Masilla lista para estucar">
+<meta name="twitter:description" content="Pasta de alta pureza a base de cal, lista para aplicar. Ficha técnica, rendimiento y pedidos por WhatsApp.">
+<meta name="twitter:image" content="https://cvdc.com.co/wp-content/uploads/2026/09/ventajas-masilla-cemix.jpg">
+
+<meta name="theme-color" content="#22394C">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="https://cvdc.com.co/wp-content/uploads/2026/09/Recurso-2-scaled.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -361,6 +380,71 @@
   }
   .calc-order.show{display:inline-flex;}
 
+  /* ---------- reveal on scroll ---------- */
+  .reveal{
+    opacity:0; transform:translateY(18px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in-view{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+
+  /* ---------- comparador antes/después ---------- */
+  .compare{
+    position:relative; width:100%; aspect-ratio:4/3; overflow:hidden;
+    border-radius:10px; border:1px solid var(--card-line); background:#000;
+    touch-action:pan-y;
+  }
+  .compare img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    user-select:none; -webkit-user-drag:none;
+  }
+  .compare-before{clip-path:inset(0 50% 0 0);}
+  .compare-label{
+    position:absolute; top:14px; font-size:.75rem; font-weight:600;
+    color:#fff; background:rgba(0,0,0,.45); padding:5px 12px; border-radius:100px;
+    letter-spacing:.02em; pointer-events:none;
+  }
+  .compare-label.l-before{left:14px;}
+  .compare-label.l-after{right:14px;}
+  .compare-handle{
+    position:absolute; top:0; bottom:0; left:50%; width:0;
+    pointer-events:none; z-index:2;
+  }
+  .compare-handle::before{
+    content:""; position:absolute; top:0; bottom:0; left:0;
+    width:3px; background:#fff; transform:translateX(-50%);
+    box-shadow:0 0 0 1px rgba(0,0,0,.15);
+  }
+  .compare-handle::after{
+    content:"↔"; position:absolute; top:50%; left:0; transform:translate(-50%,-50%);
+    width:40px; height:40px; background:#fff; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.1rem; color:var(--navy); box-shadow:0 3px 10px rgba(0,0,0,.25);
+  }
+  .compare-range{
+    position:absolute; inset:0; width:100%; height:100%; margin:0;
+    opacity:0; cursor:ew-resize; z-index:3;
+    -webkit-appearance:none; appearance:none;
+  }
+  .compare-note{font-size:.8rem; color:var(--ink-soft); margin-top:10px;}
+
+  /* ---------- formulario de pedido ---------- */
+  .field{margin-bottom:14px;}
+  .field label{display:block; font-size:.85rem; color:#C9D2D8; margin-bottom:6px;}
+  .field input, .field textarea{
+    width:100%; padding:12px 14px; border-radius:7px; border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.95); font-size:1rem; font-family:'Work Sans',sans-serif;
+    resize:vertical;
+  }
+
+  /* ---------- botones secundarios de contacto ---------- */
+  .contact-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:16px;}
+
+  /* ---------- FAQ ---------- */
+  details.acc.faq summary{font-size:1rem;}
+
   /* stroke divider (trowel motif) */
   .stroke-divider{height:26px; overflow:hidden; background:var(--paper);}
   .stroke-divider svg{width:100%; height:100%; display:block;}
@@ -424,7 +508,7 @@
 </div>
 
 <section class="section" id="producto">
-  <div class="wrap">
+  <div class="wrap reveal">
     <p class="eyebrow">El producto</p>
     <div class="two-col">
       <div>
@@ -452,7 +536,7 @@
 </div>
 
 <section class="section" id="aplicacion">
-  <div class="wrap">
+  <div class="wrap reveal">
     <p class="eyebrow">Modo de uso</p>
     <div class="two-col reverse">
       <div class="media">
@@ -474,8 +558,25 @@
   </div>
 </section>
 
+<section class="section" id="antes-despues">
+  <div class="wrap reveal">
+    <p class="eyebrow">El resultado</p>
+    <h2>Antes y después</h2>
+    <p>Desliza para ver la diferencia.</p>
+    <div class="compare" id="compareBox">
+      <img class="compare-after" src="https://cvdc.com.co/wp-content/uploads/2026/09/IMG_5049.JPG.jpeg" alt="Superficie terminada con masilla">
+      <img class="compare-before" id="compareBefore" src="https://cvdc.com.co/wp-content/uploads/2026/09/IMG_5048.png" alt="Superficie antes de aplicar la masilla">
+      <span class="compare-label l-before">Antes</span>
+      <span class="compare-label l-after">Después</span>
+      <div class="compare-handle" id="compareHandle"></div>
+      <input type="range" class="compare-range" id="compareRange" min="0" max="100" value="50" aria-label="Deslizar para comparar antes y después" oninput="actualizarComparador(this.value)">
+    </div>
+    <p class="compare-note">Arrastra el círculo con la flecha para comparar.</p>
+  </div>
+</section>
+
 <section class="section" id="rendimiento">
-  <div class="wrap">
+  <div class="wrap reveal">
     <p class="eyebrow">Rinde lo que necesitas</p>
     <h2>Calcula cuántas bolsas necesitas</h2>
     <p>El rendimiento medio es de 5 m² por bolsa de 10 kg, aplicando entre 1 y 2 mm por mano. Puede variar según el acabado de la superficie donde vayas a trabajar.</p>
@@ -485,10 +586,18 @@
         <p>Ingresa el área que vas a estucar y te decimos cuántas bolsas de 10 kg debes pedir.</p>
       </div>
       <div class="calc-box">
+        <div class="field">
+          <label for="nombre">Tu nombre</label>
+          <input type="text" id="nombre" placeholder="Ej: Carlos Parra">
+        </div>
         <label for="area">Área a estucar (m²)</label>
         <div class="calc-row">
           <input type="number" id="area" min="0" step="0.5" placeholder="Ej: 42" inputmode="decimal">
           <button class="btn" onclick="calcularBolsas()">Calcular</button>
+        </div>
+        <div class="field" style="margin-top:14px;">
+          <label for="direccion">Dirección o barrio de entrega (opcional)</label>
+          <input type="text" id="direccion" placeholder="Ej: Barrio Turín, Villamaría">
         </div>
         <div class="calc-result" id="resultado"></div>
         <a class="btn calc-order" id="btnPedirCalculo" href="#" target="_blank" rel="noopener">Pedir esta cantidad por WhatsApp</a>
@@ -499,7 +608,7 @@
 </section>
 
 <section class="section" id="seguridad">
-  <div class="wrap">
+  <div class="wrap reveal">
     <p class="eyebrow">Seguridad y salud</p>
     <h2>Manéjala con los cuidados de cualquier material a base de cal</h2>
     <p>Clasificada según el Sistema Globalmente Armonizado (SGA) como irritante para la piel y los ojos. Nada fuera de lo común para un producto de estuco, pero vale la pena tomar precauciones.</p>
@@ -575,7 +684,7 @@
 </div>
 
 <section class="section" id="beneficios">
-  <div class="wrap">
+  <div class="wrap reveal">
     <p class="eyebrow">Por qué usarla</p>
     <div class="two-col">
       <div>
@@ -594,8 +703,40 @@
   </div>
 </section>
 
+<section class="section" id="faq">
+  <div class="wrap reveal">
+    <p class="eyebrow">Antes de escribirnos</p>
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="acc faq">
+      <summary>¿Sirve para exteriores?</summary>
+      <div class="acc-body"><p>Se usa principalmente en interiores y en superficies protegidas. Si vas a trabajar en una zona expuesta, protégela de la lluvia mientras cura, tal como se indica en el modo de aplicación.</p></div>
+    </details>
+    <details class="acc faq">
+      <summary>¿Cuánto dura una bolsa sin abrir?</summary>
+      <div class="acc-body"><p>No tiene un tiempo límite de almacenamiento: con el paso del tiempo mejora sus características. Solo guárdala bien cerrada, entre 15 °C y 25 °C, lejos del sol y la lluvia.</p></div>
+    </details>
+    <details class="acc faq">
+      <summary>Se me secó la masilla dentro de la bolsa, ¿todavía sirve?</summary>
+      <div class="acc-body"><p>Sí. Basta con añadir un poco de agua y mezclar para dejarla en condiciones de aplicación otra vez.</p></div>
+    </details>
+    <details class="acc faq">
+      <summary>¿Puedo pintar directamente encima?</summary>
+      <div class="acc-body"><p>Sí, ese es justo uno de sus usos principales: dejar la superficie lista para pintar. Espera a que seque bien al tacto (2 a 3 horas, según la temperatura del lugar) antes de aplicar la pintura.</p></div>
+    </details>
+    <details class="acc faq">
+      <summary>¿Hacen envíos fuera de Manizales?</summary>
+      <div class="acc-body"><p>Escríbenos por WhatsApp contándonos tu ciudad y te confirmamos cobertura y tiempos de entrega.</p></div>
+    </details>
+    <details class="acc faq">
+      <summary>¿Cuántas bolsas debo pedir para mi proyecto?</summary>
+      <div class="acc-body"><p>Usa la calculadora más arriba: ingresa el área en m² y te decimos cuántas bolsas necesitas. Con ese número ya puedes escribirnos por WhatsApp para confirmar disponibilidad y precio.</p></div>
+    </details>
+  </div>
+</section>
+
 <section class="section brand-band">
-  <div class="wrap">
+  <div class="wrap reveal">
     <div class="split">
       <div class="blogo">
         <img src="https://cvdc.com.co/wp-content/uploads/2026/09/Recurso-2-scaled.png" alt="Masillas Colombia">
@@ -610,7 +751,7 @@
 </section>
 
 <section class="section contact" id="contacto">
-  <div class="wrap">
+  <div class="wrap reveal">
     <p class="eyebrow" style="color:var(--amber);">Contacto</p>
     <h2>Haz tu pedido</h2>
     <p>Escríbenos por WhatsApp para cotizar tu pedido o resolver dudas técnicas sobre el producto.</p>
@@ -619,9 +760,14 @@
       <span class="glyph">💬</span>
       <span class="txt">
         <strong>Pedir por WhatsApp</strong>
-        <span>+57 300 247 3804 · respuesta directa</span>
+        <span>+57 312 731 6051 · respuesta directa</span>
       </span>
     </a>
+
+    <div class="contact-actions">
+      <a class="btn btn-ghost" id="btnVcard" href="#" download="Masillas-Colombia.vcf">Agregar a mis contactos</a>
+      <button class="btn btn-ghost" onclick="compartirPagina()" type="button">Compartir esta página</button>
+    </div>
 
     <div class="contact-grid">
       <div class="contact-card">
@@ -630,7 +776,7 @@
       </div>
       <div class="contact-card">
         <div class="k">Dirección</div>
-        <div class="v">Malteria Manizales zona industrial</div>
+        <div class="v">Maltería, Manizales, zona industrial</div>
       </div>
     </div>
   </div>
@@ -655,6 +801,8 @@ function calcularBolsas(){
   var input = document.getElementById('area');
   var out = document.getElementById('resultado');
   var boton = document.getElementById('btnPedirCalculo');
+  var nombre = document.getElementById('nombre').value.trim();
+  var direccion = document.getElementById('direccion').value.trim();
   var area = parseFloat(input.value);
   if(!area || area <= 0){
     out.innerHTML = 'Ingresa un área válida en metros cuadrados.';
@@ -665,14 +813,65 @@ function calcularBolsas(){
   var kg = bolsas*10;
   out.innerHTML = 'Necesitas aproximadamente <strong>' + bolsas + (bolsas===1?' bolsa':' bolsas') + '</strong> de 10 kg — unos ' + kg + ' kg en total.';
 
-  var mensaje = 'Hola, quiero hacer un pedido de Masilla. Necesito aproximadamente '
-    + bolsas + (bolsas===1?' bolsa':' bolsas') + ' de 10 kg (para unos ' + area + ' m2).';
+  var mensaje = 'Hola' + (nombre ? ', soy ' + nombre : '') + '. Quiero hacer un pedido de Masilla.\n'
+    + 'Necesito aproximadamente ' + bolsas + (bolsas===1?' bolsa':' bolsas') + ' de 10 kg (para unos ' + area + ' m2).';
+  if(direccion){
+    mensaje += '\nDirección de entrega: ' + direccion;
+  }
   boton.href = 'https://wa.me/573127316051?text=' + encodeURIComponent(mensaje);
   boton.classList.add('show');
 }
 document.getElementById('area').addEventListener('keydown', function(e){
   if(e.key === 'Enter'){ calcularBolsas(); }
 });
+
+/* ---------- comparador antes/después ---------- */
+function actualizarComparador(v){
+  document.getElementById('compareBefore').style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
+  document.getElementById('compareHandle').style.left = v + '%';
+}
+
+/* ---------- compartir nativo ---------- */
+function compartirPagina(){
+  var datos = {
+    title: 'Masillas Colombia',
+    text: 'Masilla para estuco, lista para aplicar. Mira la ficha técnica:',
+    url: 'https://masillascolombiasas.github.io/'
+  };
+  if(navigator.share){
+    navigator.share(datos).catch(function(){});
+  } else if(navigator.clipboard){
+    navigator.clipboard.writeText(datos.url);
+    alert('Link copiado. ¡Ya lo puedes pegar donde quieras!');
+  } else {
+    window.prompt('Copia este link:', datos.url);
+  }
+}
+
+/* ---------- agregar a contactos (vCard) ---------- */
+(function(){
+  var vcard = 'BEGIN:VCARD\r\nVERSION:3.0\r\nN:;Masillas Colombia;;;\r\nFN:Masillas Colombia\r\nORG:Masillas Colombia\r\nTEL;TYPE=CELL:+573127316051\r\nEMAIL:masillascolombiasas@gmail.com\r\nADR:;;Maltería, zona industrial;Manizales;Caldas;;Colombia\r\nURL:https://masillascolombiasas.github.io/\r\nEND:VCARD';
+  var link = document.getElementById('btnVcard');
+  link.setAttribute('href', 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard));
+})();
+
+/* ---------- animaciones al hacer scroll ---------- */
+(function(){
+  var elementos = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    elementos.forEach(function(el){ el.classList.add('in-view'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:.15});
+  elementos.forEach(function(el){ observer.observe(el); });
+})();
 </script>
 
 </body>
